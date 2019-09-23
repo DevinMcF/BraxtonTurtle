@@ -1,4 +1,5 @@
 from turtle import *
+import sys
 
 
 def four_color_square(size, color1, color2, color3, color4):
@@ -19,9 +20,5 @@ def four_color_square(size, color1, color2, color3, color4):
     screen.exitonclick()
 
 
-size = int(input("What size do you want it?: "))
-color1 = input("What do you want the first color to be?: ")
-color2 = input("What do you want the second color to be?: ")
-color3 = input("What do you want the third color to be?: ")
-color4 = input("What do you want the fourth color to be?: ")
-four_color_square(size, color1, color2, color3, color4)
+four_color_square(int(sys.argv[1]), sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])
+

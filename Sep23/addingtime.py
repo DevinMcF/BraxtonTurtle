@@ -1,14 +1,13 @@
 import datetime
+import sys
 
 
 def add_time(h, m, s):
     now = datetime.datetime.now()
     added = datetime.timedelta(seconds=s, minutes=m, hours=h)
-    newtime = now + added
-    print(f"The day is {newtime.month}/{newtime.day}/{newtime.year} and the time is {newtime.hour}:{newtime.minute}:{newtime.second}")
+    new_time = now + added
+    print(f"The day is {new_time.month}/{new_time.day}/{new_time.year} and the time is {new_time.hour}:{new_time.minute}:{new_time.second}")
 
 
-hours = int(input("How many hours to add?: "))
-minute = int(input("How many minutes to add?: "))
-seconds = int(input("How many seconds to add?: "))
-add_time(hours, minute, seconds)
+add_time(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]))
+
