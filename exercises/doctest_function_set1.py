@@ -92,7 +92,7 @@ def gcf(m, n):
           >>> gcf(24, 12)
           12
         """
-    while n:
+    while n != 0:
         m, n = n, m % n
     return m
 
