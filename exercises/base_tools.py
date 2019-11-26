@@ -1,7 +1,7 @@
 def to_binary(num):
     if num == 0:
-        return [0]
-    digits = []
+        return "0"
+    digits = ""
     while num:
         digits = str(num % 2) + digits
         num //= 2
@@ -10,8 +10,8 @@ def to_binary(num):
 
 def to_base3(num):
     if num == 0:
-        return [0]
-    digits = []
+        return "0"
+    digits = ""
     while num:
         digits = str(num % 3) + digits
         num //= 3
@@ -20,8 +20,8 @@ def to_base3(num):
 
 def to_base4(num):
     if num == 0:
-        return [0]
-    digits = []
+        return "0"
+    digits = ""
     while num:
         digits = str(num % 4) + digits
         num //= 4
@@ -30,7 +30,7 @@ def to_base4(num):
 
 def to_base(num, base):
     if num == 0:
-        return [0]
+        return "0"
     digits = ""
     while num:
         digits = str(num % base) + digits
