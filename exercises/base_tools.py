@@ -47,7 +47,7 @@ def to_base64(num):
     while num:
         numstr = digits[num % 64] + numstr
         num //= 64
-    return f"{numstr}"
+    return numstr
 
 
 print(to_base64(65535))
