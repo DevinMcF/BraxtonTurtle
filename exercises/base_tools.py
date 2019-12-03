@@ -28,11 +28,26 @@ def to_base4(num):
     return digits
 
 
+# Max 36
 def to_base(num, base):
     if num == 0:
         return "0"
-    digits = ""
+    numstr = ""
     while num:
-        digits = str(num % base) + digits
+        numstr = chr((num % base)+55) + numstr
         num //= base
-    return digits
+    return numstr
+
+
+def to_base64(num):
+    digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    if num == 0:
+        return "0"
+    numstr = ""
+    while num:
+        numstr = digits[num % 64] + numstr
+        num //= 64
+    return f"{numstr}"
+
+
+print(to_base64(65535))
