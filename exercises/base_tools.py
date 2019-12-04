@@ -53,15 +53,12 @@ def to_base64num(num):
 def encode_base64(ys):
     digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
     test_str = str(ys)
-    s = ""
+    s, o, fo, fs = "", [], [], ""
     for i in test_str:
         i = format(ord(i), 'b')
         if len(i) < 8:
             i = ("0" * (8-len(i))) + i
         s = s + i
-    o = []
-    fo = []
-    fs = ""
     while s:
         o.append(s[:6])
         s = s[6:]
