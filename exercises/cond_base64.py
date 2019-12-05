@@ -7,6 +7,3 @@ def encode_base64(ys):
     for num in fo: fs = fs + digits[int(num)]
     fs = fs + ("=" * (4 - (len(fs) % 4))) if not (len(fs) % 4) == 0 else False
     return fs
-
-
-print(encode_base64("Pizza"))

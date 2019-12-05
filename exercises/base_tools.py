@@ -48,6 +48,7 @@ def to_base64num(num):
         numstr = digits[num % 64] + numstr
         num //= 64
     return numstr
+print(to_base64num(609532))
 
 
 def encode_base64(ys):
@@ -83,7 +84,7 @@ def encode_base64(ys):
     if not (len(fs) % 4) == 0:
         fs = fs + ("=" * (4 - (len(fs) % 4)))
     return fs
-print(encode_base64("Pizza"))
+
 
 def decode_base64(ys):
     # Base64 Digits
